@@ -1,0 +1,47 @@
+<footer>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-6 col-md-6">
+          <h3 class="color">Site Map</h3>
+          <ul class="list-unstyled three-column">
+            <li><a href=""> Home </a></li>
+            <li><a href=""> Services </a></li>
+            <li><a href=""> About</a></li>
+
+          </ul>
+  
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <h3 class="color">Latest Articles</h3>
+
+            
+           
+            <div class="media d-flex justify-content-center align-items-start flex-column">
+              <% for (let i = 0; i < 3; i++) { %>
+              <div class="media-body">
+                
+                <p> <a href="/article/ <%= latestArticle[i].id %> "> <%= latestArticle[i].header %> </p> </a>
+                
+              </div>
+              <% } %>
+            </div>
+            
+          </div>
+          
+          
+             
+        
+            
+  
+
+           
+          
+        
+      </div>
+    </div>
+    <div class="copyright text-center">
+      Copyright &copy; 2021 <span class="color">My Blog Site</span>
+    </div>
+  </footer>

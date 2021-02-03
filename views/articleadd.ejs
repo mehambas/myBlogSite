@@ -1,0 +1,37 @@
+
+<%- include("./head.ejs") %>
+
+<%- include("./header.ejs") %>
+
+<div class="container add">
+  <div class="p-3 mt-5 mb-5 add-inside">
+    <h3 class="p-2 text-center bg-info text-white ">
+      Article Add Platform
+    </h3>
+    <form enctype="multipart/form-data" action="/newarticle-add" method="post">
+      <div class="row mb-2">
+        <div class="col">
+          <input required class="form-control" type="text" name="header" placeholder="Article Header">
+        </div>
+
+      </div>
+      <textarea required class="form-control mb-2" name="article" placeholder="Article" rows="10"></textarea>
+      <input required class="form-control mb-2" type="text" name="category" placeholder="Category">
+
+
+
+      <div class="col form-control mb-2 d-flex align-items-center">
+          <span>Add a Photo : </span>
+          <input class="pl-3" name="folder" id="folder" type="file">
+      </div>
+      <input class="w-100 btn btn-danger" type="submit" value="SEND" >
+    </form>
+
+  </div>
+</div>
+
+    
+    <%- include("./footer.ejs") %> 
+
+  </body>
+</html>

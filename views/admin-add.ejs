@@ -1,0 +1,125 @@
+
+<%- include("./admin-head") %> 
+
+<%- include("./admin-header") %> 
+
+    <div class="container-fluid admin_body">
+        <div class="row admin_body_inside">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/admin">
+                                <span data-feather="/admin"></span>
+                                Profile Informations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin-all">
+                                <span data-feather="file"></span>
+                                All Articles
+                            </a>
+                        </li>
+                    
+                    </ul>
+
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Articles Edit </span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/admin-add">
+                                <span data-feather="file-text"></span>
+                                New Article Add
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin-del">
+                                <span data-feather="file-text"></span>
+                                Article Delete 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin-alter">
+                                <span data-feather="file-text"></span>
+                                Article Alteration 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin-com">
+                                <span data-feather="file-text"></span>
+                                Comments Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">New Article Add</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container add w-50 article_add">
+                    <div class="p-3 add-inside">
+                      <h3 class="p-2 text-center bg-dark text-white ">
+                        Article Add Platform
+                      </h3>
+                      <form enctype="multipart/form-data" action="/newarticle-add" method="post">
+                        <div class="row mb-2">
+                          <div class="col">
+                            <input required class="form-control" type="text" name="header" placeholder="Article Header">
+                          </div>
+                  
+                        </div>
+                        <textarea required class="form-control mb-2" name="article" placeholder="Article" rows="10"></textarea>
+                        <input required class="form-control mb-2" type="text" name="category" placeholder="Category">
+                  
+                  
+                  
+                        <div class="col form-control mb-3 d-flex align-items-center justify-content-between">
+                            <span>Add a Photo: </span>
+                            <input name="folder" id="folder" type="file">
+                        </div>
+                        <input class="w-100 btn btn-info" type="submit" value="SEND" >
+                      </form>
+                  
+                    </div>
+                  </div>
+
+                
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+    </script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

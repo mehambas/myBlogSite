@@ -1,0 +1,53 @@
+.logo_admin {
+  width: 60px;
+}
+
+.home {
+  font-family: "Crimson Text", serif;
+  letter-spacing: 4px;
+}
+
+.article_add {
+  min-width: 500px;
+  padding: 0;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  background-color: #343a40;
+}
+
+.add-inside h3 {
+  border-radius: 10px;
+}
+
+.form-control {
+  padding: 5px 10px;
+}
+
+/* table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr th:nth-child{
+    border-top-left-radius: 10px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #6c757d;
+  color: #fff;
+  font-weight: 200;
+}
